@@ -1,9 +1,9 @@
-package com.creational.factory._03pizzafactroy;
+package com.creational.factory_03pizzafactroy;
 
-import com.creational.factory._01pizza.CheesePizza;
-import com.creational.factory._01pizza.NonVegPizza;
-import com.creational.factory._01pizza.Pizza;
-import com.creational.factory._01pizza.VegPizza;
+import com.creational.factory_01pizza.CheesePizza;
+import com.creational.factory_01pizza.NonVegPizza;
+import com.creational.factory_01pizza.Pizza;
+import com.creational.factory_01pizza.VegPizza;
 
 public class PizzaFactory {
 
