@@ -1,7 +1,7 @@
-package com.creational.factory.pizzastore;
+package com.creational.factory._02pizzastore;
 
-import com.creational.factory.PizzaFactory;
-import com.creational.factory.pizza.Pizza;
+import com.creational.factory._01pizza.Pizza;
+import com.creational.factory._03pizzafactroy.PizzaFactory;
 
 public class PizzaStore {
 

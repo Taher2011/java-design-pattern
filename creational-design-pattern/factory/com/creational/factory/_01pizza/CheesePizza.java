@@ -1,4 +1,4 @@
-package com.creational.factory.pizza;
+package com.creational.factory._01pizza;
 
 public class CheesePizza implements Pizza {
 
