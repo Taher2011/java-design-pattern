@@ -1,7 +1,7 @@
 package com.creational.abstractfactory_06client;
 
-import com.creational.abstractfactory_01Bike.Bike;
-import com.creational.abstractfactory_02Car.Car;
+import com.creational.abstractfactory_01bike.Bike;
+import com.creational.abstractfactory_02car.Car;
 import com.creational.abstractfactory_03abstractfactory.BikeFactory;
 import com.creational.abstractfactory_03abstractfactory.CarFactory;
 import com.creational.abstractfactory_04factory.Factory;

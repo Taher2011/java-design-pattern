@@ -1,9 +1,9 @@
 package com.creational.abstractfactory_03abstractfactory;
 
-import com.creational.abstractfactory_01Bike.Bike;
-import com.creational.abstractfactory_01Bike.CBZBike;
-import com.creational.abstractfactory_01Bike.PulsarBike;
-import com.creational.abstractfactory_01Bike.YamahaBike;
+import com.creational.abstractfactory_01bike.Bike;
+import com.creational.abstractfactory_01bike.CBZBike;
+import com.creational.abstractfactory_01bike.PulsarBike;
+import com.creational.abstractfactory_01bike.YamahaBike;
 import com.creational.abstractfactory_05enum.VehicleType;
 
 public class BikeFactory extends AbstractFactory<Bike> {
