@@ -2,6 +2,8 @@ package com.creational.singleton_03synchronizedkeyword;
 
 class Singleton {
 
+	private int data = 0;
+
 	private static Singleton singleton;
 
 	private Singleton() {
@@ -15,14 +17,22 @@ class Singleton {
 		return singleton;
 	}
 
+	public void setData(int myData) {
+		data = myData;
+	}
+
+	public int getData() {
+		return data;
+	}
 }
 
 class Thread1 extends Thread {
 
 	public void run() {
 		Singleton singleton = Singleton.getSingleton();
-		System.out.println(Thread.currentThread().getName() + " "
-				+ singleton.hashCode());
+		singleton.setData(55);
+		System.out.println("First reference: " + Thread.currentThread().getName() + " " + singleton.hashCode());
+		System.out.println("Singleton data value is: " + singleton.getData());
 	}
 }
 
@@ -30,8 +40,8 @@ class Thread2 extends Thread {
 
 	public void run() {
 		Singleton singleton = Singleton.getSingleton();
-		System.out.println(Thread.currentThread().getName() + " "
-				+ singleton.hashCode());
+		System.out.println("First reference: " + Thread.currentThread().getName() + " " + singleton.hashCode());
+		System.out.println("Singleton data value is: " + singleton.getData());
 	}
 }
 
@@ -47,7 +57,7 @@ public class PreventSingletonFromSynchronizedDemo {
 		t2.join();
 		long endTime = System.nanoTime();
 		long totalTime = endTime - startTime;
-		System.out.println(totalTime);
+		System.out.println("totalTime " + totalTime);
 	}
 
 }

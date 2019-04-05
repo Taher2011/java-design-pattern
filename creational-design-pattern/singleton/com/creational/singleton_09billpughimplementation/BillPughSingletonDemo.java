@@ -1,20 +1,21 @@
-package com.creational.singleton_01plainsingleton;
+package com.creational.singleton_09billpughimplementation;
 
 class Singleton {
 
+	// an instance attribute
 	private int data = 0;
-
-	private static Singleton singleton;
 
 	private Singleton() {
 		super();
 	}
 
+	// Doesn't require synchronization, is thread safe
+	private static class SingletonHelper {
+		private static Singleton singleton = new Singleton();
+	}
+
 	public static Singleton getSingleton() {
-		if (singleton == null) {
-			singleton = new Singleton();
-		}
-		return singleton;
+		return SingletonHelper.singleton;
 	}
 
 	public void setData(int myData) {
@@ -26,7 +27,7 @@ class Singleton {
 	}
 }
 
-public class PlainSingletonDemo {
+public class BillPughSingletonDemo {
 
 	public static void main(String[] args) {
 		Singleton singleton1 = Singleton.getSingleton();
@@ -35,16 +36,11 @@ public class PlainSingletonDemo {
 		System.out.println("Singleton data value is: " + singleton1.getData());
 
 		System.out.println();
-		
+
 		Singleton singleton2 = Singleton.getSingleton();
 		System.out.println("Second reference: " + singleton2.hashCode());
 		System.out.println("Singleton data value is: " + singleton2.getData());
 
-		System.out.println();
-		
-		Singleton singleton3 = Singleton.getSingleton();
-		System.out.println("Third reference: " + singleton3.hashCode());
-		System.out.println("Singleton data value is: " + singleton3.getData());
 	}
 
 }
