@@ -9,10 +9,11 @@ class Singleton {
 	}
 
 	public static Singleton getSingleton() {
-
-		synchronized (Singleton.class) {
-			if (singleton == null) {
-				singleton = new Singleton();
+		if (singleton == null) {
+			synchronized (Singleton.class) {
+				if (singleton == null) {
+					singleton = new Singleton();
+				}
 			}
 		}
 		return singleton;
@@ -24,8 +25,7 @@ class Thread1 extends Thread {
 
 	public void run() {
 		Singleton singleton = Singleton.getSingleton();
-		System.out.println(Thread.currentThread().getName() + " "
-				+ singleton.hashCode());
+		System.out.println(Thread.currentThread().getName() + " " + singleton.hashCode());
 	}
 }
 
@@ -33,8 +33,7 @@ class Thread2 extends Thread {
 
 	public void run() {
 		Singleton singleton = Singleton.getSingleton();
-		System.out.println(Thread.currentThread().getName() + " "
-				+ singleton.hashCode());
+		System.out.println(Thread.currentThread().getName() + " " + singleton.hashCode());
 	}
 }
 
