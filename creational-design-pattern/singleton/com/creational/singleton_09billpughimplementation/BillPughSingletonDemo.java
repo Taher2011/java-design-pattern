@@ -26,20 +26,33 @@ class Singleton {
 	}
 }
 
+class Thread1 extends Thread {
+
+	public void run() {
+		Singleton singleton = Singleton.getSingleton();
+		singleton.setData(55);
+		System.out.println("First reference: " + Thread.currentThread().getName() + " " + singleton.hashCode());
+		System.out.println("Singleton data value is: " + singleton.getData());
+	}
+}
+
+class Thread2 extends Thread {
+
+	public void run() {
+		Singleton singleton = Singleton.getSingleton();
+		System.out.println("First reference: " + Thread.currentThread().getName() + " " + singleton.hashCode());
+		System.out.println("Singleton data value is: " + singleton.getData());
+	}
+}
+
 public class BillPughSingletonDemo {
 
 	public static void main(String[] args) {
-		Singleton singleton1 = Singleton.getSingleton();
-		singleton1.setData(55);
-		System.out.println("First reference: " + singleton1.hashCode());
-		System.out.println("Singleton data value is: " + singleton1.getData());
+		Thread1 t1 = new Thread1();
+		Thread2 t2 = new Thread2();
 
-		System.out.println();
-
-		Singleton singleton2 = Singleton.getSingleton();
-		System.out.println("Second reference: " + singleton2.hashCode());
-		System.out.println("Singleton data value is: " + singleton2.getData());
-
+		t1.start();
+		t2.start();
 	}
 
 }
