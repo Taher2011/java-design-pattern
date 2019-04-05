@@ -10,14 +10,23 @@ public class Client {
 
 	public static void main(String[] args) {
 		AbstractFactory factory = null;
-		
+
 		factory = Factory.createFactory(VehicleType.CAR);
-		Car car = factory.createCar(VehicleType.LEMOZENE);
-		car.specification();
+		if (factory != null) {
+			Car car = factory.createCar(VehicleType.LEMOZENE);
+			if (car != null) {
+				car.specification();
+			}
+		}
 
 		factory = Factory.createFactory(VehicleType.BIKE);
-		Bike bike = factory.createBike(VehicleType.CBZ);
-		bike.specification();
+		if (factory != null) {
+			Bike bike = factory.createBike(VehicleType.CBZ);
+			if (bike != null) {
+				bike.specification();
+			}
+		}
+
 	}
 
 }
