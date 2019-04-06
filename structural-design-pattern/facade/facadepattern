@@ -1,0 +1,10 @@
+Facade Design Pattern provides a unified interface to a set of interfaces in the system.
+Facade decouples a client from complex subsystem.
+Delegates call to methods of existing subsystems.
+Client communicate with the system by sending requests to Facade.
+Facade then forward requests to appropriate subsystem objects.
+It defines a higher level interface that makes a subsystem easier to use.
+Basically hides the complexities of the interfaces.
+It does not add any new functionality.
+Can be applied to any point of development, usually when the number of interfaces grow and the system gets complex.
+Subsystem interfaces are not aware of the facade and they should not have any reference to the facade interface.
