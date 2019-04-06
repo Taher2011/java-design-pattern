@@ -1,6 +1,6 @@
 package com.creational.factory_02pizzastore;
 
-import com.creational.factory_01pizza.Pizza;
+import com.creational.factory_01pizzaentity.Pizza;
 import com.creational.factory_03pizzafactroy.PizzaFactory;
 import com.creational.factory_04pizzaenum.PizzaType;
 

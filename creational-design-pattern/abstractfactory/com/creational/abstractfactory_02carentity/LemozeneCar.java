@@ -1,4 +1,4 @@
-package com.creational.abstractfactory_02car;
+package com.creational.abstractfactory_02carentity;
 
 import com.creational.abstractfactory_05enum.VehicleType;
 

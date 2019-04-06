@@ -1,14 +1,14 @@
-package com.creational.abstractfactory_01bike;
+package com.creational.abstractfactory_01bikeentity;
 
 import com.creational.abstractfactory_05enum.VehicleType;
 
-public class CBZBike extends Bike {
+public class PulsarBike extends Bike {
 
-	public CBZBike(VehicleType bikeType) {
+	public PulsarBike(VehicleType bikeType) {
 		super();
 		this.bikeType = bikeType;
-		this.color = "Silver";
-		this.model = "2014";
+		this.color = color;
+		this.model = model;
 	}
 
 	@Override
