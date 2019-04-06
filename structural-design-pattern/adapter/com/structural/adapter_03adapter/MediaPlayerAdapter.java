@@ -21,8 +21,6 @@ public class MediaPlayerAdapter implements MediaPlayer {
 		case MP4:
 			this.advancedMediaPlayer = new Mp4AudioPlayer();
 			break;
-		default:
-			break;
 		}
 	}
 
