@@ -32,6 +32,8 @@ public class MediaPlayerAdapter implements MediaPlayer {
 			advancedMediaPlayer.playMp4(mediatype);
 		} else if (mediatype.equals(MediaType.VLC)) {
 			advancedMediaPlayer.playVlc(mediatype);
+		} else {
+			System.out.println("Invalid file format and don't support for " + mediatype);
 		}
 
 	}
