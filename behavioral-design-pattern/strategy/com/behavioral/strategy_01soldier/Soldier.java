@@ -17,4 +17,10 @@ public abstract class Soldier {
 		refillable.refill();
 	}
 
+	public void repair(Repairable repairable) {
+		this.repairable = repairable;
+		System.out.print(soldierType + " is now repairing by ");
+		repairable.repair();
+	}
+
 }

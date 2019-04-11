@@ -6,7 +6,7 @@ public class InternalRepair implements Repairable {
 
 	@Override
 	public void repair() {
-		
+		System.out.println("Internal Repairing");
 	}
 
 }

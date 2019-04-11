@@ -6,7 +6,7 @@ public class ExternalRepair implements Repairable {
 
 	@Override
 	public void repair() {
-		
+		System.out.println("External Repairing");
 	}
 
 }
