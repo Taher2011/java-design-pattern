@@ -9,24 +9,24 @@ public class Client {
 
 	public static void main(String[] args) {
 
-		WeatherStation weather = new WeatherStation();
-		Observer observerMobile = new Mobile(weather);
-		Observer observerLaptop = new Laptop(weather);
+		WeatherStation weatherStation = new WeatherStation();
+		Observer observerMobile = new Mobile(weatherStation);
+		Observer observerLaptop = new Laptop(weatherStation);
 
-		weather.setTemperature(40);
-		weather.notifyObservers();
-
-		System.out.println();
-
-		weather.setTemperature(30);
-		weather.notifyObservers();
+		weatherStation.setTemperature(40);
+		weatherStation.notifyObservers();
 
 		System.out.println();
 
-		weather.removeObserver(observerLaptop);
+		weatherStation.setTemperature(30);
+		weatherStation.notifyObservers();
 
-		weather.setTemperature(20);
-		weather.notifyObservers();
+		System.out.println();
+
+		weatherStation.removeObserver(observerLaptop);
+
+		weatherStation.setTemperature(20);
+		weatherStation.notifyObservers();
 
 	}
 
