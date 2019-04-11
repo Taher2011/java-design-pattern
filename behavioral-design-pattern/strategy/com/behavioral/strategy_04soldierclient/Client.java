@@ -13,9 +13,9 @@ import com.behavioral.strategy_03strategyimpl.WeaponBasedRefill;
 public class Client {
 
 	public static void main(String[] args) {
-		
+
 		Soldier soldier = null;
-		
+
 		soldier = new Archer();
 		soldier.attack();
 		soldier.refill(new WeaponBasedRefill());
@@ -37,9 +37,9 @@ public class Client {
 		soldier = new Robot();
 		soldier.attack();
 		soldier.repair(new ExternalRepair());
-		
+
 		System.out.println();
-		
+
 		soldier.attack();
 		soldier.repair(new InternalRepair());
 	}
