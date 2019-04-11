@@ -1,14 +1,14 @@
-package com.behavioral.strategy_04soldierclient;
+package com.behavioral.strategy_04strategyclient;
 
-import com.behavioral.strategy_01soldier.Archer;
-import com.behavioral.strategy_01soldier.Gunman;
-import com.behavioral.strategy_01soldier.Palladin;
-import com.behavioral.strategy_01soldier.Robot;
-import com.behavioral.strategy_01soldier.Soldier;
-import com.behavioral.strategy_03strategyimpl.ExternalRepair;
-import com.behavioral.strategy_03strategyimpl.InternalRepair;
-import com.behavioral.strategy_03strategyimpl.TimeBasedRefill;
-import com.behavioral.strategy_03strategyimpl.WeaponBasedRefill;
+import com.behavioral.strategy_01strategyclass.Archer;
+import com.behavioral.strategy_01strategyclass.Gunman;
+import com.behavioral.strategy_01strategyclass.Palladin;
+import com.behavioral.strategy_01strategyclass.Robot;
+import com.behavioral.strategy_01strategyclass.Soldier;
+import com.behavioral.strategy_03strategybehaviorimpl.ExternalRepair;
+import com.behavioral.strategy_03strategybehaviorimpl.InternalRepair;
+import com.behavioral.strategy_03strategybehaviorimpl.TimeBasedRefill;
+import com.behavioral.strategy_03strategybehaviorimpl.WeaponBasedRefill;
 
 public class Client {
 

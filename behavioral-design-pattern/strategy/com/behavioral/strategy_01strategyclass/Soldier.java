@@ -1,7 +1,7 @@
-package com.behavioral.strategy_01soldier;
+package com.behavioral.strategy_01strategyclass;
 
-import com.behavioral.strategy_02strategy.Refillable;
-import com.behavioral.strategy_02strategy.Repairable;
+import com.behavioral.strategy_02strategybehavior.Refillable;
+import com.behavioral.strategy_02strategybehavior.Repairable;
 
 public abstract class Soldier {
 

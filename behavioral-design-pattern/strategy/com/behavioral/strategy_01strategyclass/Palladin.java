@@ -1,4 +1,4 @@
-package com.behavioral.strategy_01soldier;
+package com.behavioral.strategy_01strategyclass;
 
 public class Palladin extends Soldier {
 	

@@ -1,6 +1,6 @@
-package com.behavioral.strategy_03strategyimpl;
+package com.behavioral.strategy_03strategybehaviorimpl;
 
-import com.behavioral.strategy_02strategy.Refillable;
+import com.behavioral.strategy_02strategybehavior.Refillable;
 
 public class TimeBasedRefill implements Refillable {
 
