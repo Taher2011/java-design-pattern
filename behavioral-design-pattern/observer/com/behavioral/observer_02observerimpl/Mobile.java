@@ -1,13 +1,13 @@
 package com.behavioral.observer_02observerimpl;
 
 import com.behavioral.observer_01observer.Observer;
-import com.behavioral.observer_03observable.Weather;
+import com.behavioral.observer_03observable.WeatherStation;
 
 public class Mobile implements Observer {
 	
-	Weather weather;
+	WeatherStation weather;
 
-	public Mobile(Weather weather) {
+	public Mobile(WeatherStation weather) {
 		super();
 		this.weather = weather;
 		weather.registerObserver(this);

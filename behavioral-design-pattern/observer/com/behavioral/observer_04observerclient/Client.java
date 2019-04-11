@@ -3,13 +3,13 @@ package com.behavioral.observer_04observerclient;
 import com.behavioral.observer_01observer.Observer;
 import com.behavioral.observer_02observerimpl.Laptop;
 import com.behavioral.observer_02observerimpl.Mobile;
-import com.behavioral.observer_03observable.Weather;
+import com.behavioral.observer_03observable.WeatherStation;
 
 public class Client {
 
 	public static void main(String[] args) {
 
-		Weather weather = new Weather();
+		WeatherStation weather = new WeatherStation();
 		Observer observerMobile = new Mobile(weather);
 		Observer observerLaptop = new Laptop(weather);
 

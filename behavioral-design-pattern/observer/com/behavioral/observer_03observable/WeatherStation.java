@@ -5,13 +5,13 @@ import java.util.List;
 
 import com.behavioral.observer_01observer.Observer;
 
-public class Weather {
+public class WeatherStation {
 
 	private int temperature;
 
 	private List<Observer> observers = null;
 
-	public Weather() {
+	public WeatherStation() {
 		super();
 		observers = new ArrayList<>();
 	}
