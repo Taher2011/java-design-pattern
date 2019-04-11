@@ -1,4 +1,4 @@
-package com.behavioral.command_05client;
+package com.behavioral.command_05commandclient;
 
 import com.behavioral.command_01command.Command;
 import com.behavioral.command_02commandimpl.LightOffCommand;
