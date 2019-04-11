@@ -5,23 +5,23 @@ import com.behavioral.observer_03observable.WeatherStation;
 
 public class Laptop implements Observer {
 
-	WeatherStation weather;
+	WeatherStation weatherStation;
 
-	public Laptop(WeatherStation weather) {
+	public Laptop(WeatherStation weatherStation) {
 		super();
-		this.weather = weather;
-		weather.registerObserver(this);
+		this.weatherStation = weatherStation;
+		weatherStation.registerObserver(this);
 	}
 
 	@Override
 	public void update() {
-		System.out.println("Laptop Displaying Temperature is "
-				+ weather.getTemperature());
+		int temperature = weatherStation.getTemperature();
+		display(temperature);
 	}
 
 	@Override
-	public void display() {
-
+	public void display(int temperature) {
+		System.out.println("Laptop Displaying Temperature is " + temperature);
 	}
 
 }

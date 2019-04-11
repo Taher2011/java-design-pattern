@@ -5,6 +5,6 @@ public interface Observer {
 
 	void update();
 
-	void display();
+	void display(int temperature);
 
 }

@@ -4,24 +4,24 @@ import com.behavioral.observer_01observer.Observer;
 import com.behavioral.observer_03observable.WeatherStation;
 
 public class Mobile implements Observer {
-	
-	WeatherStation weather;
 
-	public Mobile(WeatherStation weather) {
+	WeatherStation weatherStation;
+
+	public Mobile(WeatherStation weatherStation) {
 		super();
-		this.weather = weather;
-		weather.registerObserver(this);
+		this.weatherStation = weatherStation;
+		weatherStation.registerObserver(this);
 	}
 
 	@Override
 	public void update() {
-		System.out.println("Mobile Displaying Temperature is "
-				+ weather.getTemperature());
+		int temperature = weatherStation.getTemperature();
+		display(temperature);
 	}
 
 	@Override
-	public void display() {
-
+	public void display(int temperature) {
+		System.out.println("Mobile Displaying Temperature is " + temperature);
 	}
 
 }
