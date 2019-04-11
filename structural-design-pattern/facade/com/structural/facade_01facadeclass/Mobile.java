@@ -1,4 +1,4 @@
-package com.structural.facade_01mobileentity;
+package com.structural.facade_01facadeclass;
 
 public interface Mobile {
 

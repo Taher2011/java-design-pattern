@@ -1,4 +1,4 @@
-package com.structural.facade_03client;
+package com.structural.facade_03facadeclient;
 
 import com.structural.facade_02facade.MobileStoreFacade;
 

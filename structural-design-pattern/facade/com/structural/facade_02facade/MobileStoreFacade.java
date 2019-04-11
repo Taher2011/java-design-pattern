@@ -1,9 +1,9 @@
 package com.structural.facade_02facade;
 
-import com.structural.facade_01mobileentity.Mobile;
-import com.structural.facade_01mobileentity.OppoMobile;
-import com.structural.facade_01mobileentity.SamsungMobile;
-import com.structural.facade_01mobileentity.VivoMobile;
+import com.structural.facade_01facadeclass.Mobile;
+import com.structural.facade_01facadeclass.OppoMobile;
+import com.structural.facade_01facadeclass.SamsungMobile;
+import com.structural.facade_01facadeclass.VivoMobile;
 
 public class MobileStoreFacade {
 

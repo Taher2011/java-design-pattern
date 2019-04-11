@@ -1,4 +1,4 @@
-package com.structural.decorator_03client;
+package com.structural.decorator_03decoratorclient;
 
 import com.structural.decorator_01decoratedentity.FrenchPizza;
 import com.structural.decorator_01decoratedentity.Pizza;

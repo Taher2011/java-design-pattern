@@ -1,4 +1,4 @@
-package com.structural.adapter_05client;
+package com.structural.adapter_05adapterclient;
 
 import com.structural.adapter_01target.MediaPlayer;
 import com.structural.adapter_01target.Mp3AudioPlayer;
