@@ -18,14 +18,14 @@ public class Client {
 
 		soldier = new Archer();
 		soldier.attack();
-		soldier.refill(new WeaponBasedRefill());
-		soldier.refill(new TimeBasedRefill());
+		soldier.doRefill(new WeaponBasedRefill());
+		soldier.doRefill(new TimeBasedRefill());
 
 		System.out.println();
 
 		soldier = new Gunman();
 		soldier.attack();
-		soldier.refill(new TimeBasedRefill());
+		soldier.doRefill(new TimeBasedRefill());
 
 		System.out.println();
 
@@ -36,12 +36,12 @@ public class Client {
 
 		soldier = new Robot();
 		soldier.attack();
-		soldier.repair(new ExternalRepair());
+		soldier.doRepair(new ExternalRepair());
 
 		System.out.println();
 
 		soldier.attack();
-		soldier.repair(new InternalRepair());
+		soldier.doRepair(new InternalRepair());
 	}
 
 }
