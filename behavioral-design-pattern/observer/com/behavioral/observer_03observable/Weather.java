@@ -34,7 +34,7 @@ public class Weather {
 
 	public void notifyObservers() {
 		for (Observer observer : observers) {
-			observer.update(this);
+			observer.update();
 		}
 	}
 

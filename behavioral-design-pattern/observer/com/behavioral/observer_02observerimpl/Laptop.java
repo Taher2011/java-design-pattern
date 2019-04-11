@@ -5,13 +5,16 @@ import com.behavioral.observer_03observable.Weather;
 
 public class Laptop implements Observer {
 
+	Weather weather;
+
 	public Laptop(Weather weather) {
 		super();
+		this.weather = weather;
 		weather.registerObserver(this);
 	}
 
 	@Override
-	public void update(Weather weather) {
+	public void update() {
 		System.out.println("Laptop Displaying Temperature is "
 				+ weather.getTemperature());
 	}
