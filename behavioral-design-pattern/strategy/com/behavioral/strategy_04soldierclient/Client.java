@@ -13,7 +13,9 @@ import com.behavioral.strategy_03strategyimpl.WeaponBasedRefill;
 public class Client {
 
 	public static void main(String[] args) {
+		
 		Soldier soldier = null;
+		
 		soldier = new Archer();
 		soldier.attack();
 		soldier.refill(new WeaponBasedRefill());
