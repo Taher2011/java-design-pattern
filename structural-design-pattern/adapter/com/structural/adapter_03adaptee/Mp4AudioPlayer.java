@@ -1,4 +1,4 @@
-package com.structural.adapter_02adaptee;
+package com.structural.adapter_03adaptee;
 
 import com.structural.adapter_04enums.MediaType;
 

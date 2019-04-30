@@ -1,9 +1,9 @@
-package com.structural.adapter_03adapter;
+package com.structural.adapter_02adapter;
 
 import com.structural.adapter_01target.MediaPlayer;
-import com.structural.adapter_02adaptee.AdvancedMediaPlayer;
-import com.structural.adapter_02adaptee.Mp4AudioPlayer;
-import com.structural.adapter_02adaptee.VlcAudioPlayer;
+import com.structural.adapter_03adaptee.AdvancedMediaPlayer;
+import com.structural.adapter_03adaptee.Mp4AudioPlayer;
+import com.structural.adapter_03adaptee.VlcAudioPlayer;
 import com.structural.adapter_04enums.MediaType;
 
 public class MediaPlayerAdapter implements MediaPlayer {
