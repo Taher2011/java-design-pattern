@@ -6,7 +6,7 @@ public class Client {
 
 	public static void main(String[] args) {
 		MobileStoreFacade facade = new MobileStoreFacade();
-		facade.getMobileDetails("Apple");
+		facade.getMobileDetails("Oppo");
 	}
 
 }
