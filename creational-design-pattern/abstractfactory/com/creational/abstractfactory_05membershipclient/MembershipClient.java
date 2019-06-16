@@ -9,19 +9,16 @@ public class MembershipClient {
 
 	public static void main(String[] args) {
 
-		MemberAbstractFactory abstractFactory = MemberFactory.createLocationFctory(Membership.PARIS);
+		MemberAbstractFactory abstractFactory = MemberFactory.createLocationFctory(Membership.NEWYORK);
 		if (abstractFactory != null) {
-			Member member = abstractFactory.createMembership(Membership.LIFETIME);
-			if (member != null) {
-				member.register();
-				member.notified();
-			} else {
-				System.out.println("Membership Type is not valid");
+			Member member = abstractFactory.createMembership(Membership.ANNUAL);
+			if (member == null) {
+				{
+					System.out.println("Membership is not valid");
+				}
 			}
 		} else {
 			System.out.println("Location is not valid");
 		}
-
 	}
-
 }

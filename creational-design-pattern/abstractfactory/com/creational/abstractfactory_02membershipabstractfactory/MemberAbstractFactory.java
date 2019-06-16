@@ -7,6 +7,12 @@ public abstract class MemberAbstractFactory {
 
 	public Member createMembership(Membership membership) {
 		Member member = createLocationMembership(membership);
+		if (member != null) {
+			member.register();
+			member.notified();
+		} else {
+			return member;
+		}
 		return member;
 	}
 
