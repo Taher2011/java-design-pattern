@@ -1,7 +1,10 @@
 package com.behavioral.command_01command;
 
 public interface Command {
-
-	void execute();
+	/*
+	 * execute() receives a command from invoker and invokes right action on
+	 * receiver
+	 */
+	void execute(String command);
 
 }
