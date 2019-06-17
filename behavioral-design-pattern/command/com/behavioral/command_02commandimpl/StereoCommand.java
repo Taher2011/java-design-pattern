@@ -2,6 +2,7 @@ package com.behavioral.command_02commandimpl;
 
 import com.behavioral.command_01command.Command;
 import com.behavioral.command_04receiver.Stereo;
+import com.behavioral.command_06commandenums.Commands;
 
 public class StereoCommand implements Command {
 
@@ -13,16 +14,22 @@ public class StereoCommand implements Command {
 	}
 
 	@Override
-	public void execute(String command) {
-		if ("StereoOn".equals(command)) {
+	public void execute(Commands commands) {
+		switch (commands) {
+		case STEREO_ON:
 			stereo.stereoOn();
-		} else if ("StereoOff".equals(command)) {
+			break;
+		case STEREO_OFF:
 			stereo.stereoOff();
-		} else if ("StereoInsertDVD".equals(command)) {
-			stereo.setDVDInStereo();
-		} else if ("StereoSetVolume".equals(command)) {
+			break;
+		case STEREO_SET_VOLUME:
 			stereo.setVolumeOfStereo(25);
+			break;
+		case STEREO_INSERT_DVD:
+			stereo.setDVDInStereo();
+			break;
+		default:
+			break;
 		}
 	}
-
 }

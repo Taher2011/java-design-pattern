@@ -2,6 +2,7 @@ package com.behavioral.command_02commandimpl;
 
 import com.behavioral.command_01command.Command;
 import com.behavioral.command_04receiver.Light;
+import com.behavioral.command_06commandenums.Commands;
 
 public class LightCommand implements Command {
 
@@ -13,12 +14,16 @@ public class LightCommand implements Command {
 	}
 
 	@Override
-	public void execute(String command) {
-		if ("LightOn".equals(command)) {
+	public void execute(Commands commands) {
+		switch (commands) {
+		case LIGHT_ON:
 			light.turnOnLight();
-		} else if ("LightOff".equals(command)) {
+			break;
+		case LIGHT_OFF:
 			light.turnOffLight();
+			break;
+		default:
+			break;
 		}
 	}
-
 }

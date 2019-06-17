@@ -6,6 +6,7 @@ import com.behavioral.command_02commandimpl.StereoCommand;
 import com.behavioral.command_03invoker.Invoker;
 import com.behavioral.command_04receiver.Light;
 import com.behavioral.command_04receiver.Stereo;
+import com.behavioral.command_06commandenums.Commands;
 
 public class Client {
 
@@ -20,20 +21,17 @@ public class Client {
 		Invoker invoker = new Invoker();
 
 		invoker.setCommand(lightCommand);
-		String action = "LightOn";
-		invoker.pressButton(action);
+		invoker.pressButton(Commands.LIGHT_ON);
 
 		// we can change command dynamically
 		invoker.setCommand(stereoCommand);
-		action = "StereoOn";
-		invoker.pressButton(action);
-		invoker.pressButton("StereoInsertDVD");
-		invoker.pressButton("StereoSetVolume");
-		invoker.pressButton("StereoOff");
+		invoker.pressButton(Commands.STEREO_ON);
+		invoker.pressButton(Commands.STEREO_INSERT_DVD);
+		invoker.pressButton(Commands.STEREO_SET_VOLUME);
+		invoker.pressButton(Commands.STEREO_OFF);
 
 		invoker.setCommand(lightCommand);
-		action = "LightOff";
-		invoker.pressButton(action);
+		invoker.pressButton(Commands.LIGHT_OFF);
 	}
 
 }
