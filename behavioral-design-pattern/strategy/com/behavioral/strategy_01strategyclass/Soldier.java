@@ -11,13 +11,13 @@ public abstract class Soldier {
 
 	public abstract void attack();
 
-	public void doRefill(Refillable refillable) {
+	public void setRefillable(Refillable refillable) {
 		this.refillable = refillable;
 		System.out.print(soldierType + " is now refilling ");
 		refillable.refill();
 	}
 
-	public void doRepair(Repairable repairable) {
+	public void setRepairable(Repairable repairable) {
 		this.repairable = repairable;
 		System.out.print(soldierType + " is now repairing by ");
 		repairable.repair();
