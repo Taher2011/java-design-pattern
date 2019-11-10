@@ -19,11 +19,10 @@ public class MediaPlayerAdapter implements MediaPlayer {
 
 	}
 
-	public void playMp3() {
+	public void playLegacyMediaType() {
 
 		System.out.print("Using Adapter ");
-		advancedMediaPlayer.playMp4();
-		advancedMediaPlayer.playVlc();
+		advancedMediaPlayer.playAdvancedMedia();
 
 	}
 
