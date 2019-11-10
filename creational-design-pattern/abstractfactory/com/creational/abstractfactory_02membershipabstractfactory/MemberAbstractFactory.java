@@ -6,7 +6,7 @@ import com.creational.abstractfactory_04membershipenums.Membership;
 public abstract class MemberAbstractFactory {
 
 	public Member createMembership(Membership membership) {
-		Member member = createLocationMembership(membership);
+		Member member = createLocationSpecificMembership(membership);
 		if (member != null) {
 			member.register();
 			member.notified();
@@ -16,6 +16,6 @@ public abstract class MemberAbstractFactory {
 		return member;
 	}
 
-	public abstract Member createLocationMembership(Membership membership);
+	public abstract Member createLocationSpecificMembership(Membership membership);
 
 }

@@ -9,7 +9,7 @@ import com.creational.abstractfactory_04membershipenums.Membership;
 public class MumbaiMemberFactory extends MemberAbstractFactory {
 
 	@Override
-	public Member createLocationMembership(Membership membership) {
+	public Member createLocationSpecificMembership(Membership membership) {
 		switch (membership) {
 		case ANNUAL:
 			return new MumbaiAnnualMember();
@@ -17,7 +17,10 @@ public class MumbaiMemberFactory extends MemberAbstractFactory {
 			return new MumbaiLifetimeMember();
 		case TEMPORARY:
 			return new MumbaiTemporaryMember();
+		default:
+			break;
 		}
+
 		return null;
 	}
 }

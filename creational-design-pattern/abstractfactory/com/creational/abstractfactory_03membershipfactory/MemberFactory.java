@@ -8,7 +8,7 @@ import com.creational.abstractfactory_04membershipenums.Membership;
 
 public class MemberFactory {
 
-	public static MemberAbstractFactory createLocationFctory(Membership membership) {
+	public static MemberAbstractFactory createLocationSpecificFctory(Membership membership) {
 		switch (membership) {
 		case MUMBAI:
 			return new MumbaiMemberFactory();

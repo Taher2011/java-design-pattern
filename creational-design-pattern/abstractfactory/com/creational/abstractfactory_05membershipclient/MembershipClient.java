@@ -9,7 +9,7 @@ public class MembershipClient {
 
 	public static void main(String[] args) {
 
-		MemberAbstractFactory abstractFactory = MemberFactory.createLocationFctory(Membership.NEWYORK);
+		MemberAbstractFactory abstractFactory = MemberFactory.createLocationSpecificFctory(Membership.NEWYORK);
 		if (abstractFactory != null) {
 			Member member = abstractFactory.createMembership(Membership.ANNUAL);
 			if (member == null) {
