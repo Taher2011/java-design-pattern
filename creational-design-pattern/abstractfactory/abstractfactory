@@ -1,0 +1,2 @@
+Abstract Factory design pattern provides approach to code for interface rather than implementation.
+Abstract Factory pattern is “factory of factories” and can be easily extended to accommodate more products, for example we can add another sub-class Sydney and a factory SydneyemberFactory.
