@@ -1,2 +1,7 @@
-Adapter Pattern converts the interface of a class into another interface that client expects. Adapter lets classes work together that couldn't 
-because of incompatible interface
+Adapter pattern makes two incompatible interfaces compatible without changing their existing code.
+
+Interfaces may be incompatible, but the inner functionality should match the requirement.
+
+Adapter patterns use a single class (the adapter class) to join functionalities of independent or incompatible interfaces/classes.
+
+Adapter pattern converts the (incompatible) interface of a class (the adaptee) into another interface (the target) that clients require.
