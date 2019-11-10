@@ -1,1 +1,1 @@
-Strategy Pattern defines a family of algorithms, encapsulates each one and makes them interchangeable at runtime.
+Strategy Pattern defines a family of algorithms, encapsulates each one and makes them interchangeable at runtime to get a particular behaviour.
