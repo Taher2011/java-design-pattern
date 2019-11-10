@@ -24,15 +24,15 @@ public class WeatherStationPublisher {
 		return temperature;
 	}
 
-	public void registerObserver(Subscriber subscriber) {
+	public void registerSubscriber(Subscriber subscriber) {
 		subscribers.add(subscriber);
 	}
 
-	public void removeObserver(Subscriber subscriber) {
+	public void removeSubscriber(Subscriber subscriber) {
 		subscribers.remove(subscriber);
 	}
 
-	public void notifyObservers() {
+	public void notifySubscribers() {
 		for (Subscriber subscriber : subscribers) {
 			subscriber.update();
 		}

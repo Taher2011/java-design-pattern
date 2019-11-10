@@ -10,7 +10,7 @@ public class LaptopSubscriber implements Subscriber {
 	public LaptopSubscriber(WeatherStationPublisher weatherStation) {
 		super();
 		this.weatherStation = weatherStation;
-		weatherStation.registerObserver(this);
+		weatherStation.registerSubscriber(this);
 	}
 
 	@Override

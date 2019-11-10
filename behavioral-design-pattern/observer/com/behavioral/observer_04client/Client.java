@@ -14,19 +14,19 @@ public class Client {
 		Subscriber observerLaptop = new LaptopSubscriber(weatherStation);
 
 		weatherStation.setTemperature(40);
-		weatherStation.notifyObservers();
+		weatherStation.notifySubscribers();
 
 		System.out.println();
 
 		weatherStation.setTemperature(30);
-		weatherStation.notifyObservers();
+		weatherStation.notifySubscribers();
 
 		System.out.println();
 
-		weatherStation.removeObserver(observerLaptop);
+		weatherStation.removeSubscriber(observerLaptop);
 
 		weatherStation.setTemperature(20);
-		weatherStation.notifyObservers();
+		weatherStation.notifySubscribers();
 
 	}
 
