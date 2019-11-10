@@ -1,13 +1,13 @@
-package com.behavioral.observer_02observerimpl;
+package com.behavioral.observer_02subscriberimpl;
 
-import com.behavioral.observer_01observer.Observer;
-import com.behavioral.observer_03observable.WeatherStation;
+import com.behavioral.observer_01subscriber.Subscriber;
+import com.behavioral.observer_03publisher.WeatherStationPublisher;
 
-public class Laptop implements Observer {
+public class LaptopSubscriber implements Subscriber {
 
-	WeatherStation weatherStation;
+	WeatherStationPublisher weatherStation;
 
-	public Laptop(WeatherStation weatherStation) {
+	public LaptopSubscriber(WeatherStationPublisher weatherStation) {
 		super();
 		this.weatherStation = weatherStation;
 		weatherStation.registerObserver(this);
