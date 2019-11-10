@@ -4,11 +4,9 @@ import com.structural.decorator_01decoratedentity.Pizza;
 
 public class SaladToppingDecorator extends ToppingsDecorator {
 
-	Pizza pizza;
 
 	public SaladToppingDecorator(Pizza pizza) {
-		super();
-		this.pizza = pizza;
+		super(pizza);
 	}
 
 	@Override
