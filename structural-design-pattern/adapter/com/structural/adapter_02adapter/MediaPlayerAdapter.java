@@ -4,37 +4,26 @@ import com.structural.adapter_01target.MediaPlayer;
 import com.structural.adapter_03adaptee.AdvancedMediaPlayer;
 import com.structural.adapter_03adaptee.Mp4AudioPlayer;
 import com.structural.adapter_03adaptee.VlcAudioPlayer;
-import com.structural.adapter_04enums.MediaType;
 
 public class MediaPlayerAdapter implements MediaPlayer {
 
-	private MediaType mediatype;
 	private AdvancedMediaPlayer advancedMediaPlayer;
 
-	public MediaPlayerAdapter(MediaType mediatype) {
+	public MediaPlayerAdapter(AdvancedMediaPlayer advancedMediaPlayer) {
 		super();
-		this.mediatype = mediatype;
-		switch (mediatype) {
-		case VLC:
+		if (advancedMediaPlayer instanceof VlcAudioPlayer) {
 			this.advancedMediaPlayer = new VlcAudioPlayer();
-			break;
-		case MP4:
+		} else if (advancedMediaPlayer instanceof Mp4AudioPlayer) {
 			this.advancedMediaPlayer = new Mp4AudioPlayer();
-			break;
 		}
+
 	}
 
 	public void playMp3() {
 
 		System.out.print("Using Adapter ");
-
-		if (mediatype.equals(MediaType.MP4)) {
-			advancedMediaPlayer.playMp4(mediatype);
-		} else if (mediatype.equals(MediaType.VLC)) {
-			advancedMediaPlayer.playVlc(mediatype);
-		} else {
-			System.out.println("Invalid file format and don't support for " + mediatype);
-		}
+		advancedMediaPlayer.playMp4();
+		advancedMediaPlayer.playVlc();
 
 	}
 

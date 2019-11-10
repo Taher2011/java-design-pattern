@@ -1,14 +1,14 @@
 package com.structural.adapter_03adaptee;
 
-import com.structural.adapter_04enums.MediaType;
-
 public class Mp4AudioPlayer implements AdvancedMediaPlayer {
 
-	public void playMp4(MediaType mediatype) {
+	String mediatype = "mp4";
+
+	public void playMp4() {
 		System.out.println("Playing " + mediatype + " file");
 	}
 
-	public void playVlc(MediaType mediatype) {
+	public void playVlc() {
 		// do nothing
 	}
 
