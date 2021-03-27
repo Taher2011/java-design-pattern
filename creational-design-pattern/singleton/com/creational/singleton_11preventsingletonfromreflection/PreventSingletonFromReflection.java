@@ -1,4 +1,4 @@
-package singleton_11preventsingletonfromreflection;
+package com.creational.singleton_11preventsingletonfromreflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
