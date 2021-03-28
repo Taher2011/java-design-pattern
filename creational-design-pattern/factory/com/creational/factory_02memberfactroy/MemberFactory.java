@@ -1,10 +1,10 @@
-package com.creational.factory_03memberfactroy;
+package com.creational.factory_02memberfactroy;
 
 import com.creational.factory_01membershipentity.AnnualMember;
 import com.creational.factory_01membershipentity.LifetimeMember;
 import com.creational.factory_01membershipentity.Member;
 import com.creational.factory_01membershipentity.TemporaryMember;
-import com.creational.factory_04membershipenums.Membership;
+import com.creational.factory_03membershipenums.Membership;
 
 public class MemberFactory {
 
