@@ -7,14 +7,16 @@ import com.behavioral.command_06commandenums.Commands;
 public class StereoCommand implements Command {
 
 	Stereo stereo;
+	Commands commands;
 
-	public StereoCommand(Stereo stereo) {
+	public StereoCommand(Stereo stereo, Commands commands) {
 		super();
 		this.stereo = stereo;
+		this.commands = commands;
 	}
 
 	@Override
-	public void execute(Commands commands) {
+	public void execute() {
 		switch (commands) {
 		case STEREO_ON:
 			stereo.stereoOn();

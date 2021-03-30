@@ -7,14 +7,16 @@ import com.behavioral.command_06commandenums.Commands;
 public class LightCommand implements Command {
 
 	Light light;
+	Commands commands;
 
-	public LightCommand(Light light) {
+	public LightCommand(Light light, Commands commands) {
 		super();
 		this.light = light;
+		this.commands = commands;
 	}
 
 	@Override
-	public void execute(Commands commands) {
+	public void execute() {
 		switch (commands) {
 		case LIGHT_ON:
 			light.turnOnLight();
