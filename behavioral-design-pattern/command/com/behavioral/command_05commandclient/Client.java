@@ -18,19 +18,17 @@ public class Client {
 		Stereo stereo = new Stereo();
 		Command stereoCommand = new StereoCommand(stereo);
 
-		Invoker invoker = new Invoker();
-
-		invoker.setCommand(lightCommand);
+		Invoker invoker = new Invoker(lightCommand);
 		invoker.pressButton(Commands.LIGHT_ON);
 
 		// we can change command dynamically
-		invoker.setCommand(stereoCommand);
+		invoker = new Invoker(stereoCommand);
 		invoker.pressButton(Commands.STEREO_ON);
 		invoker.pressButton(Commands.STEREO_INSERT_DVD);
 		invoker.pressButton(Commands.STEREO_SET_VOLUME);
 		invoker.pressButton(Commands.STEREO_OFF);
 
-		invoker.setCommand(lightCommand);
+		invoker = new Invoker(lightCommand);
 		invoker.pressButton(Commands.LIGHT_OFF);
 	}
 
