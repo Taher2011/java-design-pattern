@@ -33,9 +33,9 @@ public class WeatherStationPublisher {
 	}
 
 	public void notifySubscribers() {
-		for (Subscriber subscriber : subscribers) {
-			subscriber.update();
-		}
+		subscribers.stream().forEach(s -> {
+			s.update();
+		});
 	}
 
 }
